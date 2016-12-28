@@ -2,7 +2,7 @@ import { getIssuesPerWeek } from './api';
 import { renderAnalysis } from './components/analysis';
 
 const WEEK = 7 * 24 * 60 * 60 * 1000; // in ms
-const WEEKS = [6, 7, 2, 3, 4, 5]; // last 6 weeks
+const WEEKS = [0, 1, 2, 3, 4, 5]; // last 6 weeks
 
 const getIssuesSection = () => document.querySelector('.issues-listing');
 
