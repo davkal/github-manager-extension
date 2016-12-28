@@ -1,0 +1,43 @@
+{
+  "name": "github-manager-extension",
+  "version": "0.1.0",
+  "description": "Github Manager Extension",
+  "scripts": {
+    "start": "webpack --watch",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davkal/github-manager-extension.git"
+  },
+  "keywords": [
+    "chrome",
+    "extension",
+    "github",
+    "manager",
+    "metrics"
+  ],
+  "author": "David Kaltschmidt <david.kaltschmidt@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "6.21.0",
+    "babel-eslint": "7.1.1",
+    "babel-loader": "6.2.10",
+    "babel-preset-es2015": "6.18.0",
+    "babel-preset-react": "6.16.0",
+    "babel-preset-stage-0": "6.16.0",
+    "eslint": "3.12.2",
+    "eslint-config-airbnb": "13.0.0",
+    "eslint-loader": "1.6.1",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-jsx-a11y": "2.2.3",
+    "eslint-plugin-react": "6.8.0",
+    "webpack": "^1.12.9"
+  },
+  "dependencies": {
+    "d3-array": "^1.0.2",
+    "d3-scale": "^1.0.4",
+    "react": "15.4.1",
+    "react-dom": "15.4.1"
+  }
+}

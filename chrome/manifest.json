@@ -1,0 +1,16 @@
+{
+  "name": "Github Manager Extension",
+  "version": "0.1.0",
+  "description": "Shows bug metrics on the issues page",
+  "icons": { "128": "icon.png" },
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [{
+    "matches": [
+      "https://github.com/*"
+    ],
+    "js": ["vendors.js", "inject-bundle.js"]
+  }],
+  "manifest_version": 2
+}
