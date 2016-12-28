@@ -33,7 +33,7 @@ const STYLES = {
   }
 };
 
-const WeekBars = ({ fromIso, open, closed, i, n, x, y }) => (
+const WeekBars = ({ fromIso, open = 0, closed = 0, i, n, x, y }) => (
   <g>
     <title>{i === n - 1 ? 'Last week' : `${n - i} weeks ago`}: {open} opened vs. {closed} closed</title>
     <line x1={x(fromIso)} x2={x(fromIso) + x.bandwidth()} y1={HEIGHT / 2} y2={HEIGHT / 2} strokeWidth="1" stroke="rgb(229, 229, 229)" />
@@ -64,7 +64,7 @@ export default class Analysis extends React.Component {
     const n = issues.length;
     const startIso = issues[0].fromIso;
     const endIso = issues[issues.length - 1].toIso;
-    const numbersTitle = `Average BMI of the last ${n} weeks (${startIso} - ${endIso}).
+    const numbersTitle = `BMI over the last ${n} weeks (${startIso} - ${endIso}).
 BMI (backlog management index) is the number of issues closed during the period
  divided by the number of opened issues during the same period. Only issues labeled "bug" are counted.
 A BMI larger than 100 means the backlog was being reduced during the period.`;
@@ -81,7 +81,7 @@ A BMI larger than 100 means the backlog was being reduced during the period.`;
         </div>
         <div style={STYLES.numbers} title={numbersTitle}>
           <span style={STYLES.bigNumber}>{avgBmi}</span>
-          <span style={STYLES.numberLabel}>BMI avg.</span>
+          <span style={STYLES.numberLabel}>BMI</span>
         </div>
       </div>
     );
